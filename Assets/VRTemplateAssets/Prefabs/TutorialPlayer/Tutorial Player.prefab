@@ -345,6 +345,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -667,6 +668,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -714,8 +716,6 @@ GameObject:
   - component: {fileID: 4415745982179208538}
   - component: {fileID: 2577314312240278527}
   - component: {fileID: 2736697509515568009}
-  - component: {fileID: 5063990995963626958}
-  - component: {fileID: 2133582561668262315}
   - component: {fileID: 3183612571483490189}
   m_Layer: 5
   m_Name: Video Player
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2133582561668262315}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Unity.SpatialFramework.UI.VideoTimeScrubControl,
           Assembly-CSharp
         m_MethodName: PlayOrPauseVideo
@@ -945,41 +945,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5063990995963626958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4415745982179208541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f926e9bbc6b3149869d0f7ecdf53a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Renderer: {fileID: 6548622755657529514}
-  m_RenderTextureWidth: 1920
-  m_RenderTextureHeight: 1080
-  m_RenderTextureDepth: 0
---- !u!114 &2133582561668262315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4415745982179208541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca75f292f7449044807f6ba9e6f954c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ButtonPlayOrPause: {fileID: 5199621617593546361}
-  m_Slider: {fileID: 4231661731251083404}
-  m_IconPlay: {fileID: 21300000, guid: 490272c7e5fa30f4a88f5f77ac90ca97, type: 3}
-  m_IconPause: {fileID: 21300000, guid: 5f4d26dedc364e74d880a7125d57119c, type: 3}
-  m_ButtonPlayOrPauseIcon: {fileID: 7504502502113591991}
-  m_VideoTimeText: {fileID: 4951877161052263504}
-  m_HideSliderAfterFewSeconds: 0
 --- !u!82 &3183612571483490189
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1424,7 +1389,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2133582561668262315}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Unity.SpatialFramework.UI.VideoTimeScrubControl,
           Assembly-CSharp
         m_MethodName: PlayOrPauseVideo
@@ -1613,6 +1578,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1634,6 +1601,7 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -1845,7 +1813,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2133582561668262315}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Unity.SpatialFramework.UI.VideoTimeScrubControl,
             Assembly-CSharp
           m_MethodName: OnRelease
@@ -1862,7 +1830,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2133582561668262315}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Unity.SpatialFramework.UI.VideoTimeScrubControl,
             Assembly-CSharp
           m_MethodName: OnDrag
@@ -1879,7 +1847,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2133582561668262315}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Unity.SpatialFramework.UI.VideoTimeScrubControl,
             Assembly-CSharp
           m_MethodName: OnPointerDown

@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 1910844646705829173}
   - component: {fileID: 1910844646705829172}
   - component: {fileID: 2020575360241191678}
-  - component: {fileID: 386711075217084988}
   - component: {fileID: 6111840864059469040}
   m_Layer: 5
   m_Name: Boolean Toggle
@@ -176,7 +175,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -263,20 +262,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &386711075217084988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910844646705829178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f390e213230ce1d42a51aed871ab74ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Knob: {fileID: 1910844647153936909}
-  m_ZTranslation: 5
 --- !u!114 &6111840864059469040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +596,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

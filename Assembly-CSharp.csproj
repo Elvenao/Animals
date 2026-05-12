@@ -135,6 +135,7 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\NetworkReachabilityChecker.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Extensions\TransformExtensions.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\TalkButtonDurationChecker.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Convai\ConvaiXR\Scripts\XRFixedUIPositionHandler.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -177,6 +178,7 @@
     <Compile Include="Assets\ithappy\Animals_FREE\Scripts\CreatureMover.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiHeadTracking.cs" />
     <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
+    <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NPC2NPC\ConvaiGroupNPCController.cs" />
   </ItemGroup>
   <ItemGroup>
