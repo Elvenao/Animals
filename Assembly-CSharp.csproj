@@ -145,6 +145,7 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\gRPC\ArkitBlendShapes.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\MicrophoneInputChecker.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\Visemes\VisemeBoneEffectorList.cs" />
+    <Compile Include="Assets\Scripts\ZoomCamera.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\gRPC\Service.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\API\Model\CharacterUpdateRequest.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Models\SectionData.cs" />

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\Pause.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Pause.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,11 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pause.cs",
+              "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\Pause.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Pause.cs",
+              "ToolTip": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\Pause.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Pause.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwDEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T09:38:39.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
+              "ToolTip": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T09:18:22.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "OpenXRProjectValidationRulesSetup.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Library\\PackageCache\\com.unity.xr.openxr@68fc1ed67a95\\Editor\\OpenXRProjectValidationRulesSetup.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.openxr@68fc1ed67a95\\Editor\\OpenXRProjectValidationRulesSetup.cs",
@@ -34,16 +68,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ThirdPersonController.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
               "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
               "ToolTip": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
               "RelativeToolTip": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
-              "ViewState": "AgIAAAYBAAAAAAAAAAD4vxcBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAAAIcBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T16:24:20.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-30T16:24:20.766Z"
             }
           ]
         }
