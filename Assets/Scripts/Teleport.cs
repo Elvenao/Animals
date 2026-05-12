@@ -1,15 +1,20 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class Teleport : MonoBehaviour
 {
-    public Transform Target;
-    public GameObject Player;
+    public Transform destination;
+
 
     private void OnTriggerEnter(Collider other)
     {
-        Player.transform.position = Target.transform.position;
-        Player.transform.rotation = Target.transform.rotation;
+        Debug.Log("Entró: " + other.gameObject.name + " Tag: " + other.tag);
+
+        if (other.CompareTag("Player"))
+        {
+            CharacterController cc = other.GetComponent<CharacterController>();
+            cc.enabled = false;
+            other.transform.position = destination.position;
+            cc.enabled = true;
+        }
     }
 }

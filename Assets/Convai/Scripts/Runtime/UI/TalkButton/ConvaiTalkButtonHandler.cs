@@ -90,14 +90,16 @@ namespace Convai.Scripts.Runtime.UI
 
             if (_currentActiveNPC != null)
             {
-                // _grpcAPI.InterruptCharacterSpeech();
+                //_grpcAPI.InterruptCharacterSpeech();
                 _currentActiveNPC.playerInteractionManager.UpdateActionConfig();
                 _currentActiveNPC.StartListening();
+                Debug.Log("Escuchando chinga");
                 IncreaseScale();
                 ConvaiLogger.DebugLog($"{gameObject.name} Was Clicked.", ConvaiLogger.LogCategory.Character);
             }
             else
             {
+                Debug.Log("Escuchando chinga");
                 ConvaiLogger.Warn("No active NPC found when button was pressed.", ConvaiLogger.LogCategory.Character);
             }
         }
