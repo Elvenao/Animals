@@ -13,7 +13,7 @@ public class Teleport : MonoBehaviour
         {
             CharacterController cc = other.GetComponent<CharacterController>();
             cc.enabled = false;
-            other.transform.position = destination.position;
+            other.transform.position = destination.position ;
             cc.enabled = true;
         }
     }
