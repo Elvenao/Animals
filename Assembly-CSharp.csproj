@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{876C89E8-3DE6-FE5F-7497-1EDBBE7C0BEE}</ProjectGuid>
+    <ProjectGuid>{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,6 +55,7 @@
     <UnityVersion>6000.2.14f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -62,10 +63,13 @@
   <ItemGroup>
     <Compile Include="Assets\Convai\ConvaiXR\Scripts\XRNPCUIPositionHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\Actions\ConvaiActionsHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Extensions\SkinnedMeshRendererExtension.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Utils\ActiveStatusHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiNPCAudioManager.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NPC2NPC\NPC2NPCConversationManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\gRPC\ServiceGrpc.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Utils\UIUtilities.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
@@ -78,6 +82,7 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\Models\SkinMeshRendererData.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\API\Model\SpeakerIDDetails.cs" />
     <Compile Include="Assets\ithappy\Animals_FREE\Scripts\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\FadeCanvas.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\DynamicInfo\DynamicInfoController.cs" />
@@ -92,6 +97,9 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LongTermMemory\ConvaiLTMController.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\ConvaiLipSync.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Runtime\NarrativeDesignAPI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\Player\ConvaiDynamicInputSystem.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NPC2NPC\NPCGroup.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Utils\MainThreadDispatcher.cs" />
@@ -102,16 +110,23 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NPC2NPC\Speech Bubble System\ConvaiSpeechBubbleController.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiInputManager.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\UINotificationController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiBlinkingHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\CanvasItems\ConvaiCrosshairHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\Visemes\VisemeEffectorsList.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Models\SectionChangeEventsData.cs" />
     <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\SistemaAgarre.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\ChatUIBase.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NPC2NPC\NPC2NPCGRPCClient.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\IChatUI.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\ConvaiFeedbackHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\API\Model\MemorySettings.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\LoggerSystem\ConvaiLogger.cs" />
@@ -122,8 +137,10 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\MicrophoneManager.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\LipSyncBlendFrameData.cs" />
     <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Runtime\NarrativeDesignManager.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\ConvaiPlayerDataSO.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Extensions\ImageExtensions.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\ConvaiPlayerDataHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\NotificationType.cs" />
@@ -131,18 +148,28 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\API\LongTermMemoryAPI.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\UISaveLoadSystem.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NPC2NPC\Speech Bubble System\NPCSpeechBubble.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LongTermMemory\LTMStatus.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\NetworkReachabilityChecker.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Extensions\TransformExtensions.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\TalkButtonDurationChecker.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Convai\ConvaiXR\Scripts\XRFixedUIPositionHandler.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiGRPCAPI.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\QuestionAnswerUI.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\UIMicrophoneSettings.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\gRPC\ArkitBlendShapes.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\MicrophoneInputChecker.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\Visemes\VisemeBoneEffectorList.cs" />
     <Compile Include="Assets\Scripts\ZoomCamera.cs" />
@@ -152,13 +179,20 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Runtime\NarrativeDesignTrigger.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\Types\ConvaiBlendShapeLipSync.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\WavUtility.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\Actions\ConvaiInteractablesData.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\TalkButton\ConvaiTalkButtonHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Extensions\GameObjectExtension.cs" />
     <Compile Include="Assets\Scripts\CinemachineBrain.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\TranscriptUIActiveStatusHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiPlayerInteractionManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\SONotification.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\SubtitleChatUI.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\LoggerSystem\LoggerSettings.cs" />
@@ -167,6 +201,7 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\Models\FacialExpressionData.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\CanvasItems\ConvaiLogoHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\UINotification.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\NotificationSystemHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\UISettingsPanelOpenButton.cs" />
@@ -185,14 +220,19 @@
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Roboto-Bold - License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\VRTemplateAssets\Shaders\FauxBlurURP.shader" />
     <None Include="Assets\Convai\Demo\Avatars\Convai NPC Amelia\Shaders\RL_Amplify_SkinShader_Variants_3D.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Unity - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Convai\Demo\Avatars\Convai NPC Amelia\Shaders\RL_Amplify_CorneaShaderParallax_3D.shader" />
     <None Include="Assets\Convai\Plugins\gRPC\System.Buffers\System.Buffers.dll" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Roboto-Bold - AFL.txt" />
     <None Include="Assets\Convai\Plugins\gRPC\System.Memory\LICENSE.txt" />
     <None Include="Assets\Convai\Plugins\gRPC\Grpc.Core\lib\net45\Grpc.Core.dll" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\Convai\Plugins\gRPC\System.Runtime.CompilerServices.Unsafe\LICENSE.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Convai\Plugins\gRPC\System.Memory\System.Memory.dll" />
@@ -212,6 +252,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\VRTemplateAssets\Shaders\Grid.shader" />
     <None Include="Assets\Convai\Demo\Avatars\Convai NPC Amelia\Shaders\RL_TearlineShader_3D.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
@@ -244,6 +285,7 @@
     <None Include="Assets\Convai\Art\UI\Custom Fonts\Space_Grotesk\README.txt" />
     <None Include="Assets\VRTemplateAssets\Materials\Skybox\Horizontal Skybox.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1689,19 +1731,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.XR.Hands.Samples.VisualizerSample.csproj">
-      <Project>{67D42711-71F7-9E69-A07D-E2DEE1F392CE}</Project>
+      <Project>{D6EC66C1-BBF6-DBC3-F82C-E01ED0368D40}</Project>
       <Name>Unity.XR.Hands.Samples.VisualizerSample</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
-      <Project>{66E50FAA-4D76-CEE9-8C56-2D598918EDAA}</Project>
+      <Project>{71A4F0C3-A18A-E35A-0120-CF620A3E4E6F}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VSAttribution.Editor.csproj">
-      <Project>{A1020AD6-A2A2-A9EB-8BAF-40A604AD03D0}</Project>
+      <Project>{EEF294E1-E74A-3790-F804-E848ED4EFA43}</Project>
       <Name>Unity.VSAttribution.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
-      <Project>{8EA3627B-9362-C5B3-A11C-9161741C8EFF}</Project>
+      <Project>{471AE41C-E840-2DE9-F193-FC90871D90FD}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
     </ProjectReference>
   </ItemGroup>
