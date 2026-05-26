@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@7faefd988174\\Runtime\\Interaction\\Interactables\\XRGrabInteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.xr.interaction.toolkit@7faefd988174\\Runtime\\Interaction\\Interactables\\XRGrabInteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\CreatureGrabable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CreatureGrabable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\ithappy\\Animals_FREE\\Scripts\\CreatureMover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\CreatureFlee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CreatureFlee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@7faefd988174\\Runtime\\Interaction\\Interactables\\XRGrabInteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.xr.interaction.toolkit@7faefd988174\\Runtime\\Interaction\\Interactables\\XRGrabInteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\Teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,12 +71,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CreatureGrabable.cs",
+              "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\CreatureGrabable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CreatureGrabable.cs",
+              "ToolTip": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\CreatureGrabable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CreatureGrabable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:41:26.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SistemaAgarre.cs",
+              "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
+              "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
+              "ToolTip": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
+              "RelativeToolTip": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAiwGwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:36:55.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "XRGrabInteractable.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@7faefd988174\\Runtime\\Interaction\\Interactables\\XRGrabInteractable.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@7faefd988174\\Runtime\\Interaction\\Interactables\\XRGrabInteractable.cs",
               "ToolTip": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@7faefd988174\\Runtime\\Interaction\\Interactables\\XRGrabInteractable.cs",
               "RelativeToolTip": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@7faefd988174\\Runtime\\Interaction\\Interactables\\XRGrabInteractable.cs",
-              "ViewState": "AgIAAB0LAAAAAAAAAAAiwDsLAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8LAAAAAAAAAAAIwDsLAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-21T02:01:45.919Z",
               "EditorCaption": ""
@@ -81,7 +115,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\CreatureFlee.cs",
               "ToolTip": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\CreatureFlee.cs",
               "RelativeToolTip": "Assets\\Scripts\\CreatureFlee.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAEAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-21T01:49:11.56Z",
               "EditorCaption": ""
@@ -101,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UISettingsPanel.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Convai\\Scripts\\Runtime\\UI\\SettingsPanel\\UISettingsPanel.cs",
               "RelativeDocumentMoniker": "Assets\\Convai\\Scripts\\Runtime\\UI\\SettingsPanel\\UISettingsPanel.cs",
@@ -109,12 +143,11 @@
               "RelativeToolTip": "Assets\\Convai\\Scripts\\Runtime\\UI\\SettingsPanel\\UISettingsPanel.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAiwEsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T16:05:56.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T16:05:56.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ConvaiDynamicInputSystem.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Convai\\Scripts\\Runtime\\Addons\\Player\\ConvaiDynamicInputSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Convai\\Scripts\\Runtime\\Addons\\Player\\ConvaiDynamicInputSystem.cs",
@@ -126,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "StarterAssetsInputs.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
               "RelativeDocumentMoniker": "Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
@@ -138,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Teleport.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\Teleport.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Teleport.cs",
@@ -146,12 +179,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Teleport.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T13:53:13.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T13:53:13.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ZoomCamera.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\ZoomCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ZoomCamera.cs",
@@ -163,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Pause.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\Pause.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pause.cs",
@@ -175,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
@@ -187,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "OpenXRProjectValidationRulesSetup.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Library\\PackageCache\\com.unity.xr.openxr@68fc1ed67a95\\Editor\\OpenXRProjectValidationRulesSetup.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.openxr@68fc1ed67a95\\Editor\\OpenXRProjectValidationRulesSetup.cs",
@@ -199,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ThirdPersonController.cs",
               "DocumentMoniker": "E:\\Unity\\UnityEquipo\\AVI Equipo 7\\Animal\\Animal\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
               "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",

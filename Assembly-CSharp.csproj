@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}</ProjectGuid>
+    <ProjectGuid>{876C89E8-3DE6-FE5F-7497-1EDBBE7C0BEE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,7 +55,6 @@
     <UnityVersion>6000.2.14f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -126,6 +125,7 @@
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Scripts\CreatureFlee.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\ConvaiFeedbackHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\API\Model\MemorySettings.cs" />
@@ -140,6 +140,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Runtime\NarrativeDesignManager.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\ConvaiPlayerDataSO.cs" />
+    <Compile Include="Assets\Scripts\CreatureGrabable.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Extensions\ImageExtensions.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\PlayerStats\ConvaiPlayerDataHandler.cs" />
@@ -1731,19 +1732,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.XR.Hands.Samples.VisualizerSample.csproj">
-      <Project>{D6EC66C1-BBF6-DBC3-F82C-E01ED0368D40}</Project>
+      <Project>{67D42711-71F7-9E69-A07D-E2DEE1F392CE}</Project>
       <Name>Unity.XR.Hands.Samples.VisualizerSample</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
-      <Project>{71A4F0C3-A18A-E35A-0120-CF620A3E4E6F}</Project>
+      <Project>{66E50FAA-4D76-CEE9-8C56-2D598918EDAA}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VSAttribution.Editor.csproj">
-      <Project>{EEF294E1-E74A-3790-F804-E848ED4EFA43}</Project>
+      <Project>{A1020AD6-A2A2-A9EB-8BAF-40A604AD03D0}</Project>
       <Name>Unity.VSAttribution.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
-      <Project>{471AE41C-E840-2DE9-F193-FC90871D90FD}</Project>
+      <Project>{8EA3627B-9362-C5B3-A11C-9161741C8EFF}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
     </ProjectReference>
   </ItemGroup>

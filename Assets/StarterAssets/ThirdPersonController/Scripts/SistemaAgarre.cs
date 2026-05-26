@@ -1,27 +1,31 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using ithappy.Animals_FREE;
 
 public class SistemaAgarre : MonoBehaviour
 {
     [Header("Ajustes")]
-    public Transform puntoDeAgarre; // Donde se pegará el objeto (tu pecho/manos)
-    [Tooltip("Distancia a la que puedes agarrar objetos (Radio de la burbuja)")]
+    public Transform puntoDeAgarre;
     public float radioDeAlcance = 1.5f;
     public LayerMask capasAgarrables;
+
+    [Header("Offset")]
+    public Vector3 offsetDeAgarre = new Vector3(0f, 0.3f, 0.5f);
 
     private GameObject objetoActual;
     private Rigidbody rbActual;
 
+    private RigidbodyConstraints constraintsOriginales;
+
     void Update()
     {
-        // Teclado (Tecla E)
-        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current != null &&
+            Keyboard.current.eKey.wasPressedThisFrame)
         {
             IntentarInteraccion();
         }
     }
 
-    // Esta función la llama tu botón en Android y la tecla E
     public void IntentarInteraccion()
     {
         if (objetoActual == null)
@@ -36,74 +40,190 @@ public class SistemaAgarre : MonoBehaviour
 
     void AgarrarElMasCercano()
     {
-        // 1. Crea una burbuja invisible alrededor del jugador y detecta todo lo que esté en la capa "Agarrable"
-        Collider[] objetosCercanos = Physics.OverlapSphere(transform.position, radioDeAlcance, capasAgarrables);
+        Collider[] objetosCercanos =
+            Physics.OverlapSphere(
+                transform.position,
+                radioDeAlcance,
+                capasAgarrables
+            );
 
-        // Si no encontró nada, salimos
-        if (objetosCercanos.Length == 0) return;
+        if (objetosCercanos.Length == 0)
+            return;
 
-        // 2. Buscar cuál es el objeto más cercano (por si hay varios)
         GameObject objetoMasCercano = null;
         float distanciaMinima = Mathf.Infinity;
 
         foreach (Collider col in objetosCercanos)
         {
-            float distancia = Vector3.Distance(transform.position, col.transform.position);
+            Rigidbody rb = col.GetComponent<Rigidbody>();
+
+            if (rb == null)
+                continue;
+
+            float distancia =
+                Vector3.Distance(
+                    transform.position,
+                    col.transform.position
+                );
+
             if (distancia < distanciaMinima)
             {
-                // Verificamos que tenga Rigidbody para poder agarrarlo
-                if (col.GetComponent<Rigidbody>() != null)
+                distanciaMinima = distancia;
+                objetoMasCercano = col.gameObject;
+            }
+        }
+
+        if (objetoMasCercano == null)
+            return;
+
+        objetoActual = objetoMasCercano;
+        rbActual = objetoActual.GetComponent<Rigidbody>();
+
+        // Guardar constraints originales
+        constraintsOriginales = rbActual.constraints;
+
+        // Detener movimiento residual
+        rbActual.linearVelocity = Vector3.zero;
+        rbActual.angularVelocity = Vector3.zero;
+
+        // Desactivar físicas
+        rbActual.isKinematic = true;
+        rbActual.useGravity = false;
+
+        // Congelar rotación solamente
+        rbActual.constraints =
+            RigidbodyConstraints.FreezeRotation;
+
+        // Ignorar colisiones con jugador
+        Collider[] collidersObjeto =
+            objetoActual.GetComponentsInChildren<Collider>();
+
+        Collider[] collidersJugador =
+            GetComponentsInChildren<Collider>();
+
+        foreach (Collider colObjeto in collidersObjeto)
+        {
+            foreach (Collider colJugador in collidersJugador)
+            {
+                if (colObjeto != null && colJugador != null)
                 {
-                    distanciaMinima = distancia;
-                    objetoMasCercano = col.gameObject;
+                    Physics.IgnoreCollision(
+                        colObjeto,
+                        colJugador,
+                        true
+                    );
                 }
             }
         }
 
-        // 3. Si encontramos un objeto válido, lo agarramos
-        if (objetoMasCercano != null)
+        // Avisar que fue agarrado
+        CreatureGrabbable grabbable =
+            objetoActual.GetComponent<CreatureGrabbable>();
+
+        if (grabbable != null)
         {
-            objetoActual = objetoMasCercano;
-            rbActual = objetoActual.GetComponent<Rigidbody>();
-
-            // Desactivamos físicas
-            rbActual.isKinematic = true;
-            rbActual.useGravity = false;
-
-            // Opcional: Desactivamos el collider mientras lo cargamos para que no choque con tu cuerpo
-            // objetoActual.GetComponent<Collider>().enabled = false;
-
-            // Lo pegamos al punto de agarre
-            objetoActual.transform.position = puntoDeAgarre.position;
-            objetoActual.transform.rotation = puntoDeAgarre.rotation;
-            objetoActual.transform.parent = puntoDeAgarre;
+            grabbable.estaAgarrada = true;
+            
         }
+        CreatureMover mover = objetoActual.GetComponent<CreatureMover>();
+
+        if (mover != null)
+        {
+            mover.enabled = false;
+        }
+
+        Animator anim = objetoActual.GetComponent<Animator>();
+
+        if (anim != null)
+        {
+            anim.enabled = false;
+        }
+
+
+
+        // Hacer hijo del punto de agarre
+        objetoActual.transform.SetParent(puntoDeAgarre);
+
+        objetoActual.transform.localPosition =
+            offsetDeAgarre;
+
+        objetoActual.transform.localRotation =
+            Quaternion.identity;
     }
 
     void Soltar()
     {
-        if (objetoActual != null)
+        if (objetoActual == null)
+            return;
+
+        // Restaurar colisiones
+        Collider[] collidersObjeto =
+            objetoActual.GetComponentsInChildren<Collider>();
+
+        Collider[] collidersJugador =
+            GetComponentsInChildren<Collider>();
+
+        foreach (Collider colObjeto in collidersObjeto)
         {
-            // Reactivamos físicas
-            rbActual.isKinematic = false;
-            rbActual.useGravity = true;
-
-            // Reactivamos el collider si lo desactivaste antes
-            // objetoActual.GetComponent<Collider>().enabled = true;
-
-            // Desvinculamos
-            objetoActual.transform.parent = null;
-
-            // Limpieza
-            objetoActual = null;
-            rbActual = null;
+            foreach (Collider colJugador in collidersJugador)
+            {
+                if (colObjeto != null && colJugador != null)
+                {
+                    Physics.IgnoreCollision(
+                        colObjeto,
+                        colJugador,
+                        false
+                    );
+                }
+            }
         }
+
+        // Separar del jugador
+        objetoActual.transform.SetParent(null);
+
+        // Restaurar físicas
+        rbActual.isKinematic = false;
+        rbActual.useGravity = true;
+
+        rbActual.constraints = constraintsOriginales;
+
+        // Avisar que ya no está agarrado
+        CreatureGrabbable grabbable =
+            objetoActual.GetComponent<CreatureGrabbable>();
+
+        if (grabbable != null)
+        {
+            grabbable.estaAgarrada = false;
+            
+        }
+        CreatureMover mover = objetoActual.GetComponent<CreatureMover>();
+
+        if (mover != null)
+        {
+            mover.enabled = true;
+        }
+
+        Animator anim = objetoActual.GetComponent<Animator>();
+
+        if (anim != null)
+        {
+            anim.enabled = true;
+        }
+
+
+        // Limpiar referencias
+        objetoActual = null;
+        rbActual = null;
     }
 
-    // Dibujo de la burbuja para que veas el área en el Editor (Pestaña Scene)
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = new Color(0, 1, 0, 0.3f); // Verde transparente
-        Gizmos.DrawSphere(transform.position, radioDeAlcance);
+        Gizmos.color =
+            new Color(0, 1, 0, 0.3f);
+
+        Gizmos.DrawSphere(
+            transform.position,
+            radioDeAlcance
+        );
     }
 }
