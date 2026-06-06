@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DEF1A029-4833-15BC-6AC6-9E4D9AB688D1}</ProjectGuid>
+    <ProjectGuid>{E367E0DF-C815-0CC3-2EEC-6DFDBB29BEE0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -55,6 +55,7 @@
     <UnityVersion>6000.2.14f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -87,7 +88,6 @@
     <Compile Include="Assets\Convai\Scripts\Editor\Setup\AccountsSection\UserAccountInformation\AccountInformationUI.cs" />
     <Compile Include="Assets\Convai\Scripts\Editor\Setup\ServerAnimation\Model\ServerAnimationPageData.cs" />
     <Compile Include="Assets\Convai\Scripts\Editor\Setup\ServerAnimation\View\ServerAnimationItemView.cs" />
-    <Compile Include="Assets\Convai\Scripts\Editor\Build\ConvaiPlayerDataSOChecker.cs" />
     <Compile Include="Assets\Convai\Scripts\Editor\Setup\Updates\UpdatesSectionUI.cs" />
     <Compile Include="Assets\Convai\Scripts\Editor\UI\ConvaiImagesDirectory.cs" />
     <Compile Include="Assets\Convai\Scripts\Editor\Setup\ServerAnimation\View\ServerAnimationPageView.cs" />
@@ -1228,14 +1228,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1286,10 +1278,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit.Analytics.Hooks.Editor">
@@ -1410,10 +1398,6 @@
     </Reference>
     <Reference Include="Unity.XR.Hands.Analytics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Hands.Analytics.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
@@ -1587,23 +1571,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{876C89E8-3DE6-FE5F-7497-1EDBBE7C0BEE}</Project>
+      <Project>{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Hands.Samples.VisualizerSample.csproj">
-      <Project>{67D42711-71F7-9E69-A07D-E2DEE1F392CE}</Project>
+      <Project>{D6EC66C1-BBF6-DBC3-F82C-E01ED0368D40}</Project>
       <Name>Unity.XR.Hands.Samples.VisualizerSample</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
-      <Project>{66E50FAA-4D76-CEE9-8C56-2D598918EDAA}</Project>
+      <Project>{71A4F0C3-A18A-E35A-0120-CF620A3E4E6F}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VSAttribution.Editor.csproj">
-      <Project>{A1020AD6-A2A2-A9EB-8BAF-40A604AD03D0}</Project>
+      <Project>{EEF294E1-E74A-3790-F804-E848ED4EFA43}</Project>
       <Name>Unity.VSAttribution.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
-      <Project>{8EA3627B-9362-C5B3-A11C-9161741C8EFF}</Project>
+      <Project>{471AE41C-E840-2DE9-F193-FC90871D90FD}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
     </ProjectReference>
   </ItemGroup>
