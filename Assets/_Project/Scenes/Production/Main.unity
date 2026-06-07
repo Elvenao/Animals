@@ -65184,6 +65184,8 @@ MonoBehaviour:
   distanciaAsustoMax: 12
   distanciaAsustoMin: 4
   zonaDeAdvertencia: 6
+  radioConfianza: 8
+  distanciaParada: 1.5
   limiteVelocidadSigilo: 3
 --- !u!143 &299295800
 CharacterController:
@@ -65206,7 +65208,7 @@ CharacterController:
   m_Height: 0.63
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0
+  m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.49, z: 0}
@@ -65257,7 +65259,7 @@ Animator:
   m_GameObject: {fileID: 299295792}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d9cb4d741528094fbd01808d0f03eb0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -381826,6 +381828,8 @@ MonoBehaviour:
   distanciaAsustoMax: 12
   distanciaAsustoMin: 4
   zonaDeAdvertencia: 6
+  radioConfianza: 8
+  distanciaParada: 1.5
   limiteVelocidadSigilo: 3
 --- !u!114 &1695226339
 MonoBehaviour:
@@ -389419,6 +389423,8 @@ MonoBehaviour:
   distanciaAsustoMax: 12
   distanciaAsustoMin: 4
   zonaDeAdvertencia: 6
+  radioConfianza: 8
+  distanciaParada: 1.5
   limiteVelocidadSigilo: 3
 --- !u!114 &1728281089
 MonoBehaviour:
@@ -473209,6 +473215,8 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  crouch: 0
+  interact: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1

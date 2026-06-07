@@ -1,5 +1,6 @@
 using UnityEngine;
 using ithappy.Animals_FREE;
+using StarterAssets;
 
 public class CreatureFlee : MonoBehaviour
 {
@@ -15,10 +16,18 @@ public class CreatureFlee : MonoBehaviour
     [Tooltip("Metros extra antes del pánico donde el animal solo CAMINARÁ alejándose")]
     public float zonaDeAdvertencia = 6f;
 
+    [Header("Configuración de Confianza")]
+    [Tooltip("Radio de acercamiento cuando estás AGACHADO")]
+    public float radioConfianza = 8f;
+
+    [Tooltip("A qué distancia se detendrá para no empujarte")]
+    public float distanciaParada = 1.5f;
+
     public float limiteVelocidadSigilo = 3f;
 
     private CreatureMover mover;
     private CreatureGrabbable grabbable;
+    private StarterAssetsInputs playerInputs;
     private Vector3 ultimaPosicionJugador;
 
     private void Awake()
@@ -32,52 +41,73 @@ public class CreatureFlee : MonoBehaviour
         if (player != null)
         {
             ultimaPosicionJugador = player.position;
+            playerInputs = player.GetComponent<StarterAssetsInputs>();
         }
     }
 
     private void Update()
     {
-        // 1. Si ya fue recolectado, desactiva todo movimiento
+        // 1. FRENO DE EMERGENCIA (Solución a los errores rojos en consola)
         if (grabbable != null && grabbable.estaAgarrada)
         {
-            mover.SetInput(Vector2.zero, transform.position + transform.forward, false, false);
+            if (mover.enabled)
+            {
+                // Forzamos al motor a detenerse y luego lo apagamos por completo
+                mover.SetInput(Vector2.zero, transform.position + transform.forward, false, false);
+                mover.enabled = false;
+            }
             return;
         }
 
-        // 2. Calcular velocidad real del jugador
-        float velocidadJugador = Vector3.Distance(player.position, ultimaPosicionJugador) / Time.deltaTime;
-        ultimaPosicionJugador = player.position;
-
-        // 3. Definir los radios de los estados dinámicamente
-        float radioPanico = (velocidadJugador > limiteVelocidadSigilo) ? distanciaAsustoMax : distanciaAsustoMin;
-        float radioIncomodidad = radioPanico + zonaDeAdvertencia;
+        // Si el motor fue apagado, no calculamos nada más
+        if (!mover.enabled) return;
 
         float distanciaAlJugador = Vector3.Distance(transform.position, player.position);
 
-        // 4. Lógica de los 3 Estados (Idle, Caminar, Correr)
+        // 2. LÓGICA DE CONFIANZA (Mientras mantienes presionada la tecla)
+        if (playerInputs != null && playerInputs.crouch && distanciaAlJugador < radioConfianza)
+        {
+            if (distanciaAlJugador > distanciaParada)
+            {
+                Vector3 direccionAcercamiento = (player.position - transform.position).normalized;
+                Vector3 destino = transform.position + direccionAcercamiento;
+                mover.SetInput(new Vector2(0f, 1f), destino, false, false);
+            }
+            else
+            {
+                mover.SetInput(Vector2.zero, transform.position + transform.forward, false, false);
+            }
+
+            // CRUCIAL: Actualizamos la posición aquí para evitar picos de velocidad al soltar la tecla
+            ultimaPosicionJugador = player.position;
+            return; // Salimos del Update
+        }
+
+        // 3. LÓGICA DE MIEDO (Se ejecuta en cuanto sueltas la tecla)
+        float velocidadJugador = Vector3.Distance(player.position, ultimaPosicionJugador) / Time.deltaTime;
+        ultimaPosicionJugador = player.position;
+
+        float radioPanico = (velocidadJugador > limiteVelocidadSigilo) ? distanciaAsustoMax : distanciaAsustoMin;
+        float radioIncomodidad = radioPanico + zonaDeAdvertencia;
+
         if (distanciaAlJugador < radioIncomodidad)
         {
             Vector3 direccionHuida = (transform.position - player.position).normalized;
             Vector3 destino = transform.position + direccionHuida;
-
-            // Vector2(0, 1) simula empujar el joystick hacia adelante
             Vector2 ejeMovimiento = new Vector2(0f, 1f);
 
             if (distanciaAlJugador < radioPanico)
             {
-                // ESTADO 3: Muy cerca o mucho ruido -> CORRER (run = true)
-                mover.SetInput(ejeMovimiento, destino, true, false);
+                mover.SetInput(ejeMovimiento, destino, true, false); // Corre despavorido
             }
             else
             {
-                // ESTADO 2: Cerca pero sin peligro inminente -> CAMINAR (run = false)
-                mover.SetInput(ejeMovimiento, destino, false, false);
+                mover.SetInput(ejeMovimiento, destino, false, false); // Camina para alejarse
             }
         }
         else
         {
-            // ESTADO 1: Fuera del radar -> IDLE (Sin movimiento)
-            mover.SetInput(Vector2.zero, transform.position + transform.forward, false, false);
+            mover.SetInput(Vector2.zero, transform.position + transform.forward, false, false); // Se queda quieto
         }
     }
 }

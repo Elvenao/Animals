@@ -158,6 +158,13 @@ namespace StarterAssets
 
             JumpAndGravity();
             GroundedCheck();
+
+            // Verificamos de forma segura antes de enviar la señal
+            if (_hasAnimator)
+            {
+                _animator.SetBool("Crouch", _input.crouch);
+            }
+
             Move();
         }
 
