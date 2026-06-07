@@ -159,9 +159,19 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
 
-            // Verificamos de forma segura antes de enviar la señal
             if (_hasAnimator)
             {
+                // 1. Verificamos si Remy está cargando la transportadora
+                bool estaCargando = _animator.GetBool("IsCarrying");
+
+                // 2. Si está cargando, BLOQUEAMOS agacharse y correr
+                if (estaCargando)
+                {
+                    _input.crouch = false;
+                    _input.sprint = false;
+                }
+
+                // 3. Enviamos el estado de agacharse al Animator
                 _animator.SetBool("Crouch", _input.crouch);
             }
 
@@ -222,6 +232,12 @@ namespace StarterAssets
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+
+            // Si el personaje está cargando algo, usamos una velocidad personalizada
+            if (_hasAnimator && _animator.GetBool("IsCarrying"))
+            {
+                targetSpeed = 2.5f; // 2.0 es caminar normal, 5.3 es correr. ¡Cambia el 3.5 a tu gusto!
+            }
 
             // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
