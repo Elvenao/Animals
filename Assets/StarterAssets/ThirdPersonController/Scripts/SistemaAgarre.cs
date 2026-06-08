@@ -125,6 +125,26 @@ public class SistemaAgarre : MonoBehaviour
         objetoActual = null;
     }
 
+    // Este método nos dice si Remy trae un perro o tiene las manos vacías
+    public bool TraeAnimal()
+    {
+        return objetoActual != null;
+    }
+
+    // Este método se activa cuando llegas a la mesa del hospital
+    public void EntregarAnimalTriaje()
+    {
+        if (objetoActual == null) return;
+
+        // 1. Ocultamos la caja y quitamos la animación
+        if (cajaTransportadora != null) cajaTransportadora.SetActive(false);
+        if (animatorRemy != null) animatorRemy.SetBool("IsCarrying", false);
+
+        // 2. Desaparecemos al perro permanentemente (ya está a salvo)
+        Destroy(objetoActual);
+        objetoActual = null;
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(0, 1, 0, 0.3f);

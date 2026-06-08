@@ -111,6 +111,7 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Models\TriggerData.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Utils\ConvaiAPIKeySetup.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\Player\ConvaiPlayerMovement.cs" />
+    <Compile Include="Assets\_Project\Scripts\Gameplay\ZonaTriaje.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NPC2NPC\Speech Bubble System\ConvaiSpeechBubbleController.cs" />
     <Compile Include="Assets\_Project\Scripts\Gameplay\CreatureGrabable.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiInputManager.cs" />
@@ -190,6 +191,7 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\TalkButton\ConvaiTalkButtonHandler.cs" />
     <Compile Include="Assets\organizarjerarquia.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Extensions\GameObjectExtension.cs" />
+    <Compile Include="Assets\_Project\Scripts\Music\ZonaMusicaFade.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\TranscriptUIActiveStatusHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
