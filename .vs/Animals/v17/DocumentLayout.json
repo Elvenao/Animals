@@ -1,102 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\AVI\\Emilio progress\\Animals\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\_project\\scripts\\gameplay\\zonatriaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\gameplay\\zonatriaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\starterassets\\thirdpersoncontroller\\scripts\\sistemaagarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\thirdpersoncontroller\\scripts\\sistemaagarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\_project\\scripts\\music\\zonamusicafade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\music\\zonamusicafade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\_project\\scripts\\gameplay\\teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\gameplay\\teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\starterassets\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ZonaTriaje.cs",
-              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\ZonaTriaje.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Gameplay\\ZonaTriaje.cs",
-              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\ZonaTriaje.cs",
-              "RelativeToolTip": "Assets\\_Project\\Scripts\\Gameplay\\ZonaTriaje.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T06:48:39.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Teleport.cs",
-              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\Teleport.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Gameplay\\Teleport.cs",
-              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\Teleport.cs",
-              "RelativeToolTip": "Assets\\_Project\\Scripts\\Gameplay\\Teleport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T06:39:53.847Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ZonaMusicaFade.cs",
-              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Music\\ZonaMusicaFade.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Music\\ZonaMusicaFade.cs",
-              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Music\\ZonaMusicaFade.cs",
-              "RelativeToolTip": "Assets\\_Project\\Scripts\\Music\\ZonaMusicaFade.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T06:34:48.554Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ThirdPersonController.cs",
-              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
-              "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
-              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
-              "RelativeToolTip": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAwwO4AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T07:41:47.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SistemaAgarre.cs",
-              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
-              "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
-              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
-              "RelativeToolTip": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAjwJEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T07:08:11.336Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
