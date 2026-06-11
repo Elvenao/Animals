@@ -75,6 +75,10 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
+        // --- AÑADE ESTA LÍNEA ---
+        [Tooltip("Bloquea el movimiento durante cinemáticas")]
+        public bool LockMovement = false;
+
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -230,6 +234,15 @@ namespace StarterAssets
 
         private void Move()
         {
+            // --- AÑADE ESTE BLOQUE ---
+            // Si el movimiento está bloqueado, forzamos los controles a cero
+            if (LockMovement)
+            {
+                _input.move = Vector2.zero;
+                _input.jump = false;
+                _input.sprint = false;
+            }
+
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
@@ -411,5 +424,24 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
+
+        // --- AÑADE ESTE MÉTODO AL FINAL DE LA CLASE ---
+        public void AlinearConObjetivo(Vector3 posicionObjetivo)
+        {
+            // Calculamos el ángulo exacto hacia el perro
+            Vector3 direccion = (posicionObjetivo - transform.position).normalized;
+            float anguloYaw = Mathf.Atan2(direccion.x, direccion.z) * Mathf.Rad2Deg;
+
+            // ¡Sobreescribimos la memoria terca del controlador!
+            _cinemachineTargetYaw = anguloYaw;
+            _targetRotation = anguloYaw;
+
+            // Forzamos la vista un poco hacia abajo (pitch) para no mirar al cielo
+            _cinemachineTargetPitch = 20f;
+
+            // Aplicamos la rotación al cuerpo y a la cámara base
+            transform.rotation = Quaternion.Euler(0.0f, anguloYaw, 0.0f);
+            CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride, _cinemachineTargetYaw, 0.0f);
+        }
     }
-}
+ }

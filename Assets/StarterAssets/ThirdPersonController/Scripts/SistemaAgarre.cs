@@ -23,12 +23,17 @@ public class SistemaAgarre : MonoBehaviour
 
     [Header("Control de Sigilo Durante Captura")]
     public StarterAssetsInputs starterInputs;
+    private ThirdPersonController controllerRemy;
     private bool crouchAntesDeCinematica;
 
     [Header("Ajuste del Lazo")]
     public Vector3 posicionLocalLazo = new Vector3(0.35f, -0.35f, 0.8f);
     public Vector3 rotacionLocalLazo = new Vector3(0f, 0f, 90f);
     public Vector3 escalaLocalLazo = new Vector3(1.5f, 1.5f, 1.5f);
+
+    [Header("Restricciones de Visión")]
+    [Tooltip("Ángulo máximo para detectar al perro (ej. 60 es un cono frontal)")]
+    public float anguloMaximoVision = 60f;
 
     private GameObject objetoActual;
     private bool enCinematica = false;
@@ -41,6 +46,8 @@ public class SistemaAgarre : MonoBehaviour
 
         if (starterInputs == null)
             starterInputs = GetComponent<StarterAssetsInputs>();
+
+        controllerRemy = GetComponent<ThirdPersonController>();
 
         if (camaraCaptura != null)
             camaraCaptura.gameObject.SetActive(false);
@@ -72,11 +79,7 @@ public class SistemaAgarre : MonoBehaviour
 
     void AgarrarElMasCercano()
     {
-        Collider[] objetosCercanos = Physics.OverlapSphere(
-            transform.position,
-            radioDeAlcance,
-            capasAgarrables
-        );
+        Collider[] objetosCercanos = Physics.OverlapSphere(transform.position, radioDeAlcance, capasAgarrables);
 
         if (objetosCercanos.Length == 0)
             return;
@@ -86,12 +89,26 @@ public class SistemaAgarre : MonoBehaviour
 
         foreach (Collider col in objetosCercanos)
         {
-            CreatureGrabbable grabbableEncontrado =
-                col.GetComponent<CreatureGrabbable>();
+            CreatureGrabbable grabbableEncontrado = col.GetComponent<CreatureGrabbable>();
 
             if (grabbableEncontrado == null)
                 continue;
 
+            // --- FILTRO 1: CONO DE VISIÓN (Evita agarrar de espaldas) ---
+            Vector3 direccionHaciaPerro = (col.transform.position - transform.position).normalized;
+            direccionHaciaPerro.y = 0f; // Ignoramos la altura para que funcione bien aunque mires arriba/abajo
+
+            Vector3 frenteDeRemy = transform.forward;
+            frenteDeRemy.y = 0f;
+
+            float angulo = Vector3.Angle(frenteDeRemy, direccionHaciaPerro);
+
+            // Si el perro está fuera de nuestro cono frontal, lo ignoramos y pasamos al siguiente
+            if (angulo > anguloMaximoVision)
+                continue;
+            // ------------------------------------------------------------
+
+            // --- FILTRO 2: DISTANCIA ---
             float distancia = Vector3.Distance(transform.position, col.transform.position);
 
             if (distancia < distanciaMinima)
@@ -101,6 +118,7 @@ public class SistemaAgarre : MonoBehaviour
             }
         }
 
+        // Si después de filtrar los ángulos no encontró a nadie enfrente, no hace nada
         if (objetoMasCercano == null)
             return;
 
@@ -111,6 +129,29 @@ public class SistemaAgarre : MonoBehaviour
     private IEnumerator SecuenciaDeCaptura()
     {
         enCinematica = true;
+
+        if (controllerRemy != null)
+        {
+            controllerRemy.LockCameraPosition = true;
+            controllerRemy.LockMovement = true;
+        }
+
+        // --- 0.5. FORZAR ROTACIÓN Y CÁMARAS HACIA EL ANIMAL ---
+        if (objetoActual != null)
+        {
+            if (controllerRemy != null)
+            {
+                // Le ordenamos al controlador que actualice su memoria y gire hacia el perro
+                controllerRemy.AlinearConObjetivo(objetoActual.transform.position);
+            }
+
+            if (camaraCaptura != null)
+            {
+                // Hacemos que el lente mire directo al perro (sumamos +0.3f en Y para apuntar al pecho/cabeza y no a las patas)
+                camaraCaptura.transform.LookAt(objetoActual.transform.position + new Vector3(0, 0.3f, 0));
+            }
+        }
+        // --------------------------------------------------------
 
         if (starterInputs != null)
         {
@@ -205,6 +246,12 @@ public class SistemaAgarre : MonoBehaviour
         FinalizarCaptura();
 
         enCinematica = false;
+
+        if (controllerRemy != null)
+        {
+            controllerRemy.LockCameraPosition = false;
+            controllerRemy.LockMovement = false;
+        }
 
         Debug.Log("[SafePaws] Cinemática terminada.");
     }

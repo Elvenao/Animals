@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\AVI\\Emilio progress\\Animals\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\starterassets\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\starterassets\\thirdpersoncontroller\\scripts\\sistemaagarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\thirdpersoncontroller\\scripts\\sistemaagarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\starterassets\\inputsystem\\starterassetsinputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\inputsystem\\starterassetsinputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StarterAssetsInputs.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
+              "RelativeDocumentMoniker": "Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
+              "RelativeToolTip": "Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T16:24:29.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThirdPersonController.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
+              "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
+              "RelativeToolTip": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
+              "ViewState": "AgIAAJYBAAAAAAAAAAAUwLwBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T16:23:37.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SistemaAgarre.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
+              "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
+              "RelativeToolTip": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAjwJkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T16:22:59.67Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
