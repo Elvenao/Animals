@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 using ithappy.Animals_FREE;
+using StarterAssets;
 
 public class SistemaAgarre : MonoBehaviour
 {
@@ -9,24 +11,52 @@ public class SistemaAgarre : MonoBehaviour
     public LayerMask capasAgarrables;
 
     [Header("Estética y Transportadora")]
-    [Tooltip("El modelo de la caja que pusiste dentro de la columna de Remy")]
     public GameObject cajaTransportadora;
     public Animator animatorRemy;
+    public GameObject remyMesh;
+
+    [Header("Cinemática de Captura")]
+    public Camera camaraPrincipal;
+    public Camera camaraCaptura;
+    public GameObject lazoInstrumento;
+    public float duracionCinematica = 2f;
+
+    [Header("Control de Sigilo Durante Captura")]
+    public StarterAssetsInputs starterInputs;
+    private bool crouchAntesDeCinematica;
+
+    [Header("Ajuste del Lazo")]
+    public Vector3 posicionLocalLazo = new Vector3(0.35f, -0.35f, 0.8f);
+    public Vector3 rotacionLocalLazo = new Vector3(0f, 0f, 90f);
+    public Vector3 escalaLocalLazo = new Vector3(1.5f, 1.5f, 1.5f);
 
     private GameObject objetoActual;
+    private bool enCinematica = false;
+    
 
     void Start()
     {
-        // Nos aseguramos de que la caja empiece oculta por seguridad
+        if (camaraPrincipal == null)
+            camaraPrincipal = Camera.main;
+
+        if (starterInputs == null)
+            starterInputs = GetComponent<StarterAssetsInputs>();
+
+        if (camaraCaptura != null)
+            camaraCaptura.gameObject.SetActive(false);
+
         if (cajaTransportadora != null)
-        {
             cajaTransportadora.SetActive(false);
-        }
+
+        if (lazoInstrumento != null)
+            lazoInstrumento.SetActive(false);
     }
 
     void Update()
     {
-        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current != null &&
+            Keyboard.current.eKey.wasPressedThisFrame &&
+            !enCinematica)
         {
             IntentarInteraccion();
         }
@@ -35,29 +65,32 @@ public class SistemaAgarre : MonoBehaviour
     public void IntentarInteraccion()
     {
         if (objetoActual == null)
-        {
             AgarrarElMasCercano();
-        }
         else
-        {
             Soltar();
-        }
     }
 
     void AgarrarElMasCercano()
     {
-        Collider[] objetosCercanos = Physics.OverlapSphere(transform.position, radioDeAlcance, capasAgarrables);
+        Collider[] objetosCercanos = Physics.OverlapSphere(
+            transform.position,
+            radioDeAlcance,
+            capasAgarrables
+        );
 
-        if (objetosCercanos.Length == 0) return;
+        if (objetosCercanos.Length == 0)
+            return;
 
         GameObject objetoMasCercano = null;
         float distanciaMinima = Mathf.Infinity;
 
         foreach (Collider col in objetosCercanos)
         {
-            // Filtramos asegurándonos de que sea un animal agarrable
-            CreatureGrabbable grabbableEncontrado = col.GetComponent<CreatureGrabbable>();
-            if (grabbableEncontrado == null) continue;
+            CreatureGrabbable grabbableEncontrado =
+                col.GetComponent<CreatureGrabbable>();
+
+            if (grabbableEncontrado == null)
+                continue;
 
             float distancia = Vector3.Distance(transform.position, col.transform.position);
 
@@ -68,79 +101,185 @@ public class SistemaAgarre : MonoBehaviour
             }
         }
 
-        if (objetoMasCercano == null) return;
+        if (objetoMasCercano == null)
+            return;
 
-        // 1. Guardar referencia y avisarle al perro
         objetoActual = objetoMasCercano;
-        CreatureGrabbable grabbable = objetoActual.GetComponent<CreatureGrabbable>();
-        if (grabbable != null)
+        StartCoroutine(SecuenciaDeCaptura());
+    }
+
+    private IEnumerator SecuenciaDeCaptura()
+    {
+        enCinematica = true;
+
+        if (starterInputs != null)
         {
-            grabbable.estaAgarrada = true;
+            crouchAntesDeCinematica = starterInputs.crouch;
+            starterInputs.crouch = true;
+            starterInputs.sprint = false;
         }
 
-        // 2. EL CAMBIO VISUAL: Ocultamos al perro de la calle
-        objetoActual.SetActive(false);
+        if (animatorRemy != null)
+            animatorRemy.SetBool("Crouch", true);
 
-        // 3. Mostramos la transportadora en los brazos de Remy
-        if (cajaTransportadora != null)
+        Debug.Log("[SafePaws] Iniciando cinemática de captura.");
+
+        if (remyMesh != null)
+            remyMesh.SetActive(false);
+
+        // 1. Primero prendemos y aseguramos la cámara de captura
+        if (camaraCaptura != null)
         {
-            cajaTransportadora.SetActive(true);
+            camaraCaptura.gameObject.SetActive(true);
+            camaraCaptura.enabled = true;
+            camaraCaptura.targetDisplay = 0; // Display 1
+            camaraCaptura.depth = 100;
+
+            Debug.Log("[SafePaws] Cámara de captura activada.");
+        }
+        else
+        {
+            Debug.LogWarning("[SafePaws] No está asignada camaraCaptura.");
         }
 
-        // 4. Activamos la animación de cargar
+        // 2. Después apagamos la cámara principal
+        if (camaraPrincipal != null)
+        {
+            camaraPrincipal.enabled = false;
+            Debug.Log("[SafePaws] Cámara principal desactivada.");
+        }
+        else
+        {
+            Debug.LogWarning("[SafePaws] No está asignada camaraPrincipal.");
+        }
+
+        // 3. Activamos el lazo
+        if (lazoInstrumento != null)
+        {
+            lazoInstrumento.SetActive(true);
+            lazoInstrumento.transform.localPosition = posicionLocalLazo;
+            lazoInstrumento.transform.localEulerAngles = rotacionLocalLazo;
+            lazoInstrumento.transform.localScale = escalaLocalLazo;
+
+            Debug.Log("[SafePaws] Lazo activado.");
+        }
+        else
+        {
+            Debug.LogWarning("[SafePaws] No está asignado lazoInstrumento.");
+        }
+
+        // 4. Mantener agachado durante TODA la cinemática
+        float tiempo = 0f;
+
+        while (tiempo < duracionCinematica)
+        {
+            ForzarAgachadoDuranteCaptura();
+
+            tiempo += Time.deltaTime;
+            yield return null;
+        }
+
+        // 5. Apagamos el lazo
+        if (lazoInstrumento != null)
+            lazoInstrumento.SetActive(false);
+
+        // 6. Primero regresamos la cámara principal
+        if (camaraPrincipal != null)
+        {
+            camaraPrincipal.enabled = true;
+            Debug.Log("[SafePaws] Cámara principal reactivada.");
+        }
+
+        // 7. Luego apagamos la cámara de captura
+        if (camaraCaptura != null)
+        {
+            camaraCaptura.enabled = false;
+            camaraCaptura.gameObject.SetActive(false);
+
+            Debug.Log("[SafePaws] Cámara de captura apagada.");
+        }
+
+        if (remyMesh != null)
+            remyMesh.SetActive(true);
+
+        FinalizarCaptura();
+
+        enCinematica = false;
+
+        Debug.Log("[SafePaws] Cinemática terminada.");
+    }
+
+    private void ForzarAgachadoDuranteCaptura()
+    {
+        if (starterInputs != null)
+        {
+            starterInputs.crouch = true;
+            starterInputs.sprint = false;
+        }
+
         if (animatorRemy != null)
         {
-            animatorRemy.SetBool("IsCarrying", true);
+            animatorRemy.SetBool("Crouch", true);
         }
+    }
+
+    private void FinalizarCaptura()
+    {
+        if (objetoActual == null)
+            return;
+
+        CreatureGrabbable grabbable = objetoActual.GetComponent<CreatureGrabbable>();
+
+        if (grabbable != null)
+            grabbable.estaAgarrada = true;
+
+        objetoActual.SetActive(false);
+
+        if (cajaTransportadora != null)
+            cajaTransportadora.SetActive(true);
+
+        if (animatorRemy != null)
+            animatorRemy.SetBool("IsCarrying", true);
     }
 
     void Soltar()
     {
-        if (objetoActual == null) return;
+        if (objetoActual == null)
+            return;
 
-        // 1. Ocultamos la transportadora
         if (cajaTransportadora != null)
-        {
             cajaTransportadora.SetActive(false);
-        }
 
-        // 2. Quitamos la animación de cargar a Remy
         if (animatorRemy != null)
-        {
             animatorRemy.SetBool("IsCarrying", false);
-        }
 
-        // 3. Reaparecemos al perro en frente del jugador (1.5 metros adelante)
         objetoActual.transform.position = transform.position + (transform.forward * 1.5f);
         objetoActual.SetActive(true);
 
-        // 4. Le avisamos al perro que está libre
         CreatureGrabbable grabbable = objetoActual.GetComponent<CreatureGrabbable>();
-        if (grabbable != null)
-        {
-            grabbable.estaAgarrada = false;
-        }
 
-        // Limpiar la referencia
+        if (grabbable != null)
+            grabbable.estaAgarrada = false;
+
         objetoActual = null;
     }
 
-    // Este método nos dice si Remy trae un perro o tiene las manos vacías
     public bool TraeAnimal()
     {
         return objetoActual != null;
     }
 
-    // Este método se activa cuando llegas a la mesa del hospital
     public void EntregarAnimalTriaje()
     {
-        if (objetoActual == null) return;
+        if (objetoActual == null)
+            return;
 
-        // 1. Ocultamos la caja y quitamos la animación
-        if (cajaTransportadora != null) cajaTransportadora.SetActive(false);
-        if (animatorRemy != null) animatorRemy.SetBool("IsCarrying", false);
+        if (cajaTransportadora != null)
+            cajaTransportadora.SetActive(false);
 
-        // 2. Desaparecemos al perro permanentemente (ya está a salvo)
+        if (animatorRemy != null)
+            animatorRemy.SetBool("IsCarrying", false);
+
         Destroy(objetoActual);
         objetoActual = null;
     }
