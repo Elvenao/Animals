@@ -61,9 +61,23 @@ public class SistemaAgarre : MonoBehaviour
 
     void Update()
     {
+        // 1. Verificamos si estamos escribiendo en la interfaz
+        bool escribiendoEnChat = false;
+        if (UnityEngine.EventSystems.EventSystem.current != null &&
+            UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject != null)
+        {
+            if (UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.GetComponent<TMPro.TMP_InputField>() != null ||
+                UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.GetComponent<UnityEngine.UI.InputField>() != null)
+            {
+                escribiendoEnChat = true;
+            }
+        }
+
+        // 2. Solo permite presionar E si NO hay cinemática y NO estás en el chat
         if (Keyboard.current != null &&
             Keyboard.current.eKey.wasPressedThisFrame &&
-            !enCinematica)
+            !enCinematica &&
+            !escribiendoEnChat)
         {
             IntentarInteraccion();
         }
@@ -129,6 +143,32 @@ public class SistemaAgarre : MonoBehaviour
     private IEnumerator SecuenciaDeCaptura()
     {
         enCinematica = true;
+
+        if (objetoActual != null)
+        {
+            CreatureGrabbable grabbable = objetoActual.GetComponent<CreatureGrabbable>();
+            if (grabbable != null) grabbable.estaAgarrada = true;
+
+            // Apagamos los scripts de movimiento para que no corra
+            ithappy.Animals_FREE.CreatureMover moverScript = objetoActual.GetComponent<ithappy.Animals_FREE.CreatureMover>();
+            if (moverScript != null) moverScript.enabled = false;
+
+            // IMPORTANTE: Congelamos el Rigidbody para que la gravedad no lo hunda, 
+            // pero DEJAMOS PRENDIDO el CharacterController para que no desaparezca.
+            Rigidbody rbPerro = objetoActual.GetComponent<Rigidbody>();
+            if (rbPerro != null)
+            {
+                rbPerro.linearVelocity = Vector3.zero;
+                rbPerro.isKinematic = true;
+            }
+
+            Animator animPerro = objetoActual.GetComponent<Animator>();
+            if (animPerro != null)
+            {
+                animPerro.SetFloat("Vert", 0f);
+                animPerro.SetFloat("State", 0f);
+            }
+        }
 
         if (controllerRemy != null)
         {
@@ -300,13 +340,33 @@ public class SistemaAgarre : MonoBehaviour
         if (animatorRemy != null)
             animatorRemy.SetBool("IsCarrying", false);
 
-        objetoActual.transform.position = transform.position + (transform.forward * 1.5f);
+        // --- 2. TELETRANSPORTE SEGURO ---
+        Vector3 posicionSegura = transform.position + (transform.forward * 1.5f);
+        posicionSegura.y += 0.5f; // Lo elevamos un poco para evitar hundimientos
+
+        // A) Apagamos el CC temporalmente SOLO para moverlo
+        CharacterController charController = objetoActual.GetComponent<CharacterController>();
+        if (charController != null) charController.enabled = false;
+
+        // B) Lo movemos
+        objetoActual.transform.position = posicionSegura;
+
+        // C) Prendemos el CC ya en la nueva posición segura
+        if (charController != null) charController.enabled = true;
+
         objetoActual.SetActive(true);
 
         CreatureGrabbable grabbable = objetoActual.GetComponent<CreatureGrabbable>();
+        if (grabbable != null) grabbable.estaAgarrada = false;
 
-        if (grabbable != null)
-            grabbable.estaAgarrada = false;
+        // D) Reactivamos su gravedad natural
+        Rigidbody rbPerro = objetoActual.GetComponent<Rigidbody>();
+        if (rbPerro != null) rbPerro.isKinematic = false;
+
+        // E) Reactivamos su cerebro de movimiento
+        ithappy.Animals_FREE.CreatureMover moverScript = objetoActual.GetComponent<ithappy.Animals_FREE.CreatureMover>();
+        if (moverScript != null) moverScript.enabled = true;
+        // --------------------------------
 
         objetoActual = null;
     }

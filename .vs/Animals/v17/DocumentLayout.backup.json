@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "E:\\AVI\\Emilio progress\\Animals\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\starterassets\\thirdpersoncontroller\\scripts\\sistemaagarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\_project\\scripts\\ai\\triggerhospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\ai\\triggerhospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\_project\\scripts\\managers\\bloqueoinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\managers\\bloqueoinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\starterassets\\inputsystem\\starterassetsinputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\inputsystem\\starterassetsinputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\_project\\scripts\\ai\\triggerbienvenida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\ai\\triggerbienvenida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\AVI\\Emilio progress\\Animals\\Library\\PackageCache\\com.unity.render-pipelines.universal@8a8bcae6893e\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@8a8bcae6893e\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\_project\\scripts\\gameplay\\minimapfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\gameplay\\minimapfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\starterassets\\thirdpersoncontroller\\scripts\\sistemaagarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\thirdpersoncontroller\\scripts\\sistemaagarre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\starterassets\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\_project\\scripts\\ai\\companeraia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\ai\\companeraia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|e:\\avi\\emilio progress\\animals\\assets\\starterassets\\inputsystem\\starterassetsinputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\inputsystem\\starterassetsinputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\convai\\scripts\\runtime\\loggersystem\\convailogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\convai\\scripts\\runtime\\loggersystem\\convailogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\_project\\scripts\\gameplay\\creatureflee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\gameplay\\creatureflee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\_project\\scripts\\gameplay\\creaturegrabable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\gameplay\\creaturegrabable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\ithappy\\animals_free\\scripts\\creaturemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\ithappy\\animals_free\\scripts\\creaturemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|E:\\AVI\\Emilio progress\\Animals\\assets\\starterassets\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAD5AD3-241F-6091-3043-3B2EC487A4A5}|Assembly-CSharp.csproj|solutionrelative:assets\\starterassets\\thirdpersoncontroller\\scripts\\thirdpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +62,131 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TriggerHospital.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\AI\\TriggerHospital.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\AI\\TriggerHospital.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\AI\\TriggerHospital.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\AI\\TriggerHospital.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T07:48:48.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BloqueoInicial.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Managers\\BloqueoInicial.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Managers\\BloqueoInicial.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Managers\\BloqueoInicial.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\Managers\\BloqueoInicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T07:41:29.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Lit.shader",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Library\\PackageCache\\com.unity.render-pipelines.universal@8a8bcae6893e\\Shaders\\Lit.shader",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@8a8bcae6893e\\Shaders\\Lit.shader",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Library\\PackageCache\\com.unity.render-pipelines.universal@8a8bcae6893e\\Shaders\\Lit.shader",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@8a8bcae6893e\\Shaders\\Lit.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2026-06-16T07:06:58.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TriggerBienvenida.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\AI\\TriggerBienvenida.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\AI\\TriggerBienvenida.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\AI\\TriggerBienvenida.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\AI\\TriggerBienvenida.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T06:52:24.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MinimapFollow.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\MinimapFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Gameplay\\MinimapFollow.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\MinimapFollow.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\Gameplay\\MinimapFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T06:18:58.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreatureMover.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\ithappy\\Animals_FREE\\Scripts\\CreatureMover.cs",
+              "RelativeDocumentMoniker": "Assets\\ithappy\\Animals_FREE\\Scripts\\CreatureMover.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\ithappy\\Animals_FREE\\Scripts\\CreatureMover.cs",
+              "RelativeToolTip": "Assets\\ithappy\\Animals_FREE\\Scripts\\CreatureMover.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T05:33:57.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreatureGrabable.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\CreatureGrabable.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Gameplay\\CreatureGrabable.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\CreatureGrabable.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\Gameplay\\CreatureGrabable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T05:33:41.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreatureFlee.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\CreatureFlee.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\Gameplay\\CreatureFlee.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\Gameplay\\CreatureFlee.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\Gameplay\\CreatureFlee.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T05:33:09.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConvaiLogger.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\Convai\\Scripts\\Runtime\\LoggerSystem\\ConvaiLogger.cs",
+              "RelativeDocumentMoniker": "Assets\\Convai\\Scripts\\Runtime\\LoggerSystem\\ConvaiLogger.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\Convai\\Scripts\\Runtime\\LoggerSystem\\ConvaiLogger.cs",
+              "RelativeToolTip": "Assets\\Convai\\Scripts\\Runtime\\LoggerSystem\\ConvaiLogger.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAIwIsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T04:51:42.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CompaneraIA.cs",
+              "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\AI\\CompaneraIA.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\AI\\CompaneraIA.cs",
+              "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\_Project\\Scripts\\AI\\CompaneraIA.cs",
+              "RelativeToolTip": "Assets\\_Project\\Scripts\\AI\\CompaneraIA.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwEQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T04:21:45.864Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -34,34 +197,31 @@
               "RelativeToolTip": "Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-11T16:24:29.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-11T16:24:29.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "ThirdPersonController.cs",
               "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
               "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
               "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
               "RelativeToolTip": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\ThirdPersonController.cs",
-              "ViewState": "AgIAAJkBAAAAAAAAAAAqwL0BAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAIwP8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-11T16:23:37.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-11T16:23:37.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "SistemaAgarre.cs",
               "DocumentMoniker": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
               "RelativeDocumentMoniker": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
               "ToolTip": "E:\\AVI\\Emilio progress\\Animals\\Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
               "RelativeToolTip": "Assets\\StarterAssets\\ThirdPersonController\\Scripts\\SistemaAgarre.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAjwJkAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAIwHMBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-11T16:22:59.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-11T16:22:59.67Z"
             }
           ]
         }

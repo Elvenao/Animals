@@ -2,6 +2,8 @@
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
+using UnityEngine.EventSystems;
+using TMPro;
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
  */
@@ -160,22 +162,40 @@ namespace StarterAssets
         {
             _hasAnimator = TryGetComponent(out _animator);
 
+            // --- 1. DETECTOR GLOBAL DE CHAT ---
+            bool estaEscribiendoEnChat = false;
+            if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject != null)
+            {
+                if (EventSystem.current.currentSelectedGameObject.GetComponent<TMP_InputField>() != null ||
+                    EventSystem.current.currentSelectedGameObject.GetComponent<UnityEngine.UI.InputField>() != null)
+                {
+                    estaEscribiendoEnChat = true;
+                }
+            }
+
+            // --- 2. APAGAR BOTONES SI ESTÁ ESCRIBIENDO O EN CINEMÁTICA ---
+            if (estaEscribiendoEnChat || LockMovement)
+            {
+                _input.move = Vector2.zero; // Apaga WASD
+                _input.jump = false;        // Apaga Espacio
+                _input.crouch = false;      // Apaga la C
+                _input.sprint = false;      // Apaga Shift
+            }
+            // ----------------------------------
+
             JumpAndGravity();
             GroundedCheck();
 
             if (_hasAnimator)
             {
-                // 1. Verificamos si Remy está cargando la transportadora
                 bool estaCargando = _animator.GetBool("IsCarrying");
 
-                // 2. Si está cargando, BLOQUEAMOS agacharse y correr
                 if (estaCargando)
                 {
                     _input.crouch = false;
                     _input.sprint = false;
                 }
 
-                // 3. Enviamos el estado de agacharse al Animator
                 _animator.SetBool("Crouch", _input.crouch);
             }
 
@@ -234,14 +254,6 @@ namespace StarterAssets
 
         private void Move()
         {
-            // --- AÑADE ESTE BLOQUE ---
-            // Si el movimiento está bloqueado, forzamos los controles a cero
-            if (LockMovement)
-            {
-                _input.move = Vector2.zero;
-                _input.jump = false;
-                _input.sprint = false;
-            }
 
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;

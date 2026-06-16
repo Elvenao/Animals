@@ -96,6 +96,7 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\UIDisplayNameSettings.cs" />
     <Compile Include="Assets\ithappy\Animals_FREE\Scripts\MovePlayerInput.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\SettingsPanel\MicrophoneTestController.cs" />
+    <Compile Include="Assets\_Project\Scripts\AI\TriggerHospital.cs" />
     <Compile Include="Assets\Convai\ConvaiXR\ConvaiVR\Scripts\HandAnimationController.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Runtime\NarrativeDesignKeyController.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LongTermMemory\ConvaiLTMController.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiBlinkingHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\CanvasItems\ConvaiCrosshairHandler.cs" />
+    <Compile Include="Assets\_Project\Scripts\AI\TriggerBienvenida.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\Visemes\VisemeEffectorsList.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NarrativeDesign\Models\SectionChangeEventsData.cs" />
@@ -159,6 +161,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LongTermMemory\LTMStatus.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\_Project\Scripts\Gameplay\MinimapFollow.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\NetworkReachabilityChecker.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Extensions\TransformExtensions.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
@@ -203,6 +206,7 @@
     <Compile Include="Assets\Convai\Scripts\Runtime\Addons\NotificationSystem\SONotification.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\SubtitleChatUI.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\LoggerSystem\LoggerSettings.cs" />
+    <Compile Include="Assets\_Project\Scripts\AI\CompaneraIA.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\ConvaiChatUIHandler.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\UI\Chat\ChatBoxUI.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\LipSync\Models\FacialExpressionData.cs" />
@@ -221,6 +225,7 @@
     <Compile Include="Assets\ithappy\Animals_FREE\Scripts\CreatureMover.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Core\ConvaiHeadTracking.cs" />
     <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
+    <Compile Include="Assets\_Project\Scripts\Managers\BloqueoInicial.cs" />
     <Compile Include="Assets\Convai\Scripts\Runtime\Features\NPC2NPC\ConvaiGroupNPCController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1378,6 +1383,14 @@
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1428,6 +1441,10 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit.Analytics.Hooks.Editor">
@@ -1548,6 +1565,10 @@
     </Reference>
     <Reference Include="Unity.XR.Hands.Analytics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Hands.Analytics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
